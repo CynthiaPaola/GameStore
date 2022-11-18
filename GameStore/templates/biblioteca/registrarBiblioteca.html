@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+    {%block titulo%}
+        Módulo de registro de juego en biblioteca
+    {%endblock%}
+
+{%block contenido%}
+    <h1>Registrando juego nuevo en biblioteca</h1>
+    <form action="/registrarBiblioteca" method="post">
+        <p>Ingresa el nombre del juego
+        <input type="text" name="nombreJuegoBib" id=""></p>
+        <input type="submit" value="registrar">
+    </form>
+{%endblock%}

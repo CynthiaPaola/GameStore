@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block titulo%}
+    Menu principal
+{%endblock%}
+{%block contenido%}
+    <h1>Que quieres ver hoy {{usuario}}</h1>
+    <ul>
+        <li><a href="/juegos">juegos</a></li>
+        <li><a href="/categorias">Categorias</a></li>
+        <li><a href="/biblioteca">Biblioteca</a></li>
+        <li><a href="/perfiles">Ajustes</a></li>
+    </ul>
+    <a href="/cerrarsesion">Cerrar sesion</a>
+{%endblock%}

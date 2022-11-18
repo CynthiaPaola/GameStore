@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+    {%block titulo%}
+    Iniciar Sesion
+    {%endblock%}
+{%block contenido%}
+    <h1>Bienvenido a GameStore, ingresa tus datos</h1>
+    <form action="/validar" method="post">
+        <p>Ingresa tu nombre de usuario<input type="text" name="usuario" id=""></p>
+        <p>Ingresa tu contraseña<input type="password" name="contrasena" id=""></p>
+        <input type="submit" value="Iniciar">
+    <p>{{aviso}}</p>
+{%endblock%}

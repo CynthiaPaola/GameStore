@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+    {%block titulo%}
+        Eliminacion de usuarios
+    {%endblock%}
+
+{%block contenido%}
+    <h1>Eliminando usuario</h1>
+    <form action="/eliminarUsuario/{{numUsuario}}" method="post">
+        <p>Ingresa el nombre del usuario <input type="text" name="nombreUsuario" id="" value="{{usuarios}}" readonly></p>
+        <input type="submit" value="eliminar">
+    </form>
+{%endblock%}

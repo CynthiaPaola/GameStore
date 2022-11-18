@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{%block titulo%}
+Modulo de categorias
+{%endblock%}
+{%block contenido%}
+    <h1>Listado de categorias </h1>
+   <table>
+    <tr>
+        <th> Numero</th>
+        <th>nombre </th>
+        <th>imagen</th>
+        <th>actualizar</th>
+        <th>eliminar</th>
+    </tr>
+
+    {%for c in cate %}
+    <tr>
+        <td>{{c.id_categoria}}</td>
+        <td>{{c.nombre}}</td>
+        <td>
+            <img src="/categorias/consultarImagen/{{c.id_categoria}}"
+             alt="imagen de la categoria" width="80px" height="80px">
+        </td>
+        <td><a href="/actualizarCategoria/{{ loop.index }}">actualizar</a></td>
+        <td><a href="/eliminarCategoria/{{ loop.index }}">eliminar</a></td>
+    </tr>
+    {%endfor%}
+   </table>
+   <a href="/registrarCategoria"> crear una categoria nueva</a>
+{%endblock%}

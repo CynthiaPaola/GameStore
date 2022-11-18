@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+    {%block titulo%}
+     Actualizacion de categoria
+    {%endblock%} 
+
+{%block contenido%}
+    <h1>Actualizando categoria</h1>
+    <form action="/actualizarCategoria/{{numCategoria}}" method="post">
+        <p>Ingrese el nombre de la categoria
+        <input type="text" name="nombreCategoria" id="" value="{{cate}}"></p>
+        <p>
+            imagen de la categoria
+            <input type="file" name="imgCategoria" 
+            value="/categorias/consultarImagen/{{numCategoria}}" id="">
+        </p>
+        <input type="submit" value="modificar">
+    </form>
+{%endblock%} 

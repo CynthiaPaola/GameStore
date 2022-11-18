@@ -1,0 +1,24 @@
+{%% extends 'base.html'%}
+{%block titulo%}  
+    Juegos
+{%endblock%}
+{%block contenido%} 
+    <h1>Videojuegos disponibles</h1>
+    <table>
+        <tr>
+            <th>Numero</th>
+            <th>Nombre del juego/th>
+            <th>Actualizar</th>
+            <th>Eliminar</th>
+        </tr>
+        {%for p in prods %}
+        <tr>
+            <th>{{ loop.index }}</th>
+            <td><a href="/actualizarJuego/{{ loop.index }}">actualizar</a></td>
+            <td><a href="/eliminarJuego/{{ loop.index }}">eliminar</a></td>
+        </tr>
+    </table>
+    <a href="/registrarJuego">Registrar juego nuevo</a>
+    <br>
+    <a href="/regresar">regresar</a>
+{%endblock%} 

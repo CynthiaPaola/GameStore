@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+    {%block titulo%}
+     Actualización de biblioteca
+    {%endblock%} 
+
+{%block contenido%}
+    <h1>Actualizando biblioteca</h1>
+    <form action="/actualizarBiblioteca/{{numBiblioteca}}" method="post">
+        <p>Ingrese el nombre del juego
+        <input type="text" name="nombreJuegoBib" id="" value="{{bib}}"></p>
+        <input type="submit" value="modificar">
+    </form>
+{%endblock%} 

@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+    {%block titulo%}
+        Eliminacion de juego de biblioteca
+    {%endblock%}
+
+{%block contenido%}
+    <h1>Eliminando juego de la biblioteca</h1>
+    <form action="/eliminarBiblioteca/{{numBiblioteca}}" method="post">
+        <p>Ingresa el nombre del juego <input type="text" name="nombreBiblioteca" id="" value="{{bib}}" readonly></p>
+        <input type="submit" value="eliminar">
+    </form>
+{%endblock%}

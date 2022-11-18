@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+    {%block titulo%}
+        Módulo de registro de usuarios
+    {%endblock%}
+
+{%block contenido%}
+    <h1>Registrando nuevo usuario</h1>
+    <form action="/registrarUsuario" method="post">
+        <p>Ingresa el nombre del usuario
+        <input type="text" name="nombreUsuario" id=""></p>
+        <input type="submit" value="registrar">
+    </form>
+{%endblock%}

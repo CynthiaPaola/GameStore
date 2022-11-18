@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+    {%block titulo%}  
+    Ajustes
+    {%endblock%}
+{%block contenido%} 
+    <h1>Tus Ajustes</h1>
+    <table>
+        <tr>
+            <th>Numero</th>
+            <th>Nombre del usuario</th>
+            <th>Actualizar</th>
+            <th>Eliminar</th>
+        </tr>
+
+        {%for u in usuarios %}
+        <tr>
+            <th>{{ loop.index }}</th>
+            <td>{{u}}</td>
+            <td><a href="/actualizarUsuario/{{ loop.index }}">actualizar</a></td>
+            <td><a href="/eliminarUsuario/{{ loop.index }}">eliminar</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+    <a href="/registrarUsuario">Registrar nuevo usuario</a>
+    <br>
+    <a href="/regresar">regresar</a>
+{%endblock%} 

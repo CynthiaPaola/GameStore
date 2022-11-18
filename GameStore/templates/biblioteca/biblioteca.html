@@ -1,0 +1,27 @@
+% extends 'base.html'%}
+    {%block titulo%}  
+    Biblioteca
+    {%endblock%}
+{%block contenido%} 
+    <h1>Tu biblioteca</h1>
+    <table>
+        <tr>
+            <th>Numero</th>
+            <th>Nombre del juego</th>
+            <th>Actualizar</th>
+            <th>Eliminar</th>
+        </tr>
+
+        {%for i in bib %}
+        <tr>
+            <th>{{ loop.index }}</th>
+            <td>{{i}}</td>
+            <td><a href="/actualizarBiblioteca/{{ loop.index }}">actualizar</a></td>
+            <td><a href="/eliminarBiblioteca/{{ loop.index }}">eliminar</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+    <a href="/registrarBiblioteca">Registrar juego nuevo en biblioteca</a>
+    <br>
+    <a href="/regresar">regresar</a>
+{%endblock%} 

@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+    {%block titulo%}
+     Actualización de usuarios
+    {%endblock%} 
+
+{%block contenido%}
+    <h1>Actualizando usuarios</h1>
+    <form action="/actualizarUsuario/{{numUsuario}}" method="post">
+        <p>Ingrese el nombre del usuario
+        <input type="text" name="nombreUsuario" id="" value="{{usuarios}}"></p>
+        <input type="submit" value="modificar">
+    </form>
+{%endblock%} 
